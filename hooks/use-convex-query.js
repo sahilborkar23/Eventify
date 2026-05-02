@@ -2,6 +2,8 @@ import { useQuery, useMutation } from "convex/react";
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
+
+//  Custom hook to FETCH data
 export const useConvexQuery = (query, ...args) => {
   const result = useQuery(query, ...args);
   const [data, setData] = useState(undefined);
@@ -9,7 +11,7 @@ export const useConvexQuery = (query, ...args) => {
   const [error, setError] = useState(null);
 
   // Use effect to handle the state changes based on the query result
-  useEffect(() => {
+  useEffect(() => { 
     if (result === undefined) {
       setIsLoading(true);
     } else {
@@ -32,6 +34,8 @@ export const useConvexQuery = (query, ...args) => {
   };
 };
 
+
+//  Custom hook to SEND data (mutation)
 export const useConvexMutation = (mutation) => {
   const mutationFn = useMutation(mutation);
   const [data, setData] = useState(undefined);

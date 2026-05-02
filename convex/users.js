@@ -78,6 +78,7 @@ export const getCurrentUser = query({
   },
 });
 
+
 // Complete onboarding (attendee preferences)
 export const completeOnboarding = mutation({
   args: {

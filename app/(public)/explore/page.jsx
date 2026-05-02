@@ -23,7 +23,7 @@ import { CATEGORIES } from "@/lib/data";
 import Autoplay from "embla-carousel-autoplay";
 import EventCard from "@/components/event-card";
 
-export default function ExplorePage() {
+export default function ExplorePage() { 
   const router = useRouter();
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 

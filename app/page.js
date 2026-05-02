@@ -9,6 +9,9 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="pb-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+
+
+          
           {/* Left content */}
           <div className="text-center sm:text-left">
             <div className="mb-6">
@@ -37,6 +40,9 @@ export default function LandingPage() {
               </Button>
             </Link>
           </div>
+
+
+
 
           {/* Right - 3D Phone Mockup */}
           <div className="relative block">

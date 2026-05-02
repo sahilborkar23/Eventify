@@ -1,4 +1,4 @@
-"use client";
+"use client";  // This runs on the client side (React hooks allowed)
 
 import { ConvexReactClient } from "convex/react";
 
@@ -9,7 +9,11 @@ const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL);
 
 export function ConvexClientProvider({ children }) {
   return (
-    <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
+    // Wrap the entire app to give access to Convex + Clerk auth
+    <ConvexProviderWithClerk
+      client={convex} // Convex backend connection
+      useAuth={useAuth} // Pass Clerk's auth to Convex
+    >
       {children}
     </ConvexProviderWithClerk>
   );

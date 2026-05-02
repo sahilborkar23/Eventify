@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import {
   Select,
-  SelectTrigger,
+  SelectTrigger,  
   SelectContent,
   SelectItem,
   SelectValue,

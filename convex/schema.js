@@ -31,6 +31,9 @@ export default defineSchema({
     updatedAt: v.number(),
   }).index("by_token", ["tokenIdentifier"]), // Primary auth lookup
 
+
+
+
   // Events table
   events: defineTable({
     title: v.string(),
@@ -78,6 +81,9 @@ export default defineSchema({
     .index("by_slug", ["slug"])
     .searchIndex("search_title", { searchField: "title" }),
 
+
+
+    
   // Registrations/Tickets
   registrations: defineTable({
     eventId: v.id("events"),

@@ -1,4 +1,4 @@
-"use client";
+"use client";  // allow to use hooks
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -70,7 +70,7 @@ export default function Header() {
               <Link href="/explore">Explore</Link>
             </Button>
 
-            <Authenticated>
+            <Authenticated>      
               {/* Create Event Button */}
               <Button size="sm" asChild className="flex gap-2 mr-4">
                 <Link href="/create-event">
@@ -116,7 +116,8 @@ export default function Header() {
         <div className="md:hidden border-t px-3 py-3">
           <SearchLocationBar />
         </div>
-
+      
+        {/* loader */}
         {isLoading && (
           <div className="absolute bottom-0 left-0 w-full">
             <BarLoader width={"100%"} color="#a855f7" />
