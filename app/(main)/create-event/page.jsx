@@ -218,6 +218,8 @@ export default function CreateEventPage() {
               Free: {currentUser?.freeEventsCreated || 0}/1 events created
             </p>
           )}
+
+  
         </div>
         <AIEventCreator onEventGenerated={handleAIGenerate} />
       </div>
