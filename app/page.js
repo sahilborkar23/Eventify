@@ -10,13 +10,11 @@ export default function LandingPage() {
       <section className="pb-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
 
-
-          
           {/* Left content */}
           <div className="text-center sm:text-left">
             <div className="mb-6">
               <span className="text-gray-500 font-light tracking-wide">
-                spott<span className="text-purple-400">*</span>
+                eventify<span className="text-purple-400">*</span>
               </span>
             </div>
 
@@ -47,11 +45,11 @@ export default function LandingPage() {
           {/* Right - 3D Phone Mockup */}
           <div className="relative block">
             <Image
-              src="/hero.png"
+              src="/Reventify.png"
               // src="/hero.gif"
               alt="react meetup"
-              width={700}
-              height={700}
+              width={800}
+              height={800}
               className="w-full h-auto"
               priority
             />

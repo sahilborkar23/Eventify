@@ -32,11 +32,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/spott.png"
-              alt="Spott logo"
-              width={500}
-              height={500}
-              className="w-full h-11"
+              src="/eventify.png"
+              alt="Eventify Logo"
+              width={180}
+              height={180}
               priority
             />
             {/* <span className="text-purple-500 text-2xl font-bold">spott*</span> */}
