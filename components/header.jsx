@@ -36,6 +36,7 @@ export default function Header() {
               alt="Eventify Logo"
               width={180}
               height={180}
+              className="w-full h-auto"
               priority
             />
             {/* <span className="text-purple-500 text-2xl font-bold">spott*</span> */}
