@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"; //provide dark mode
 import Footer from "@/components/footer";
 import { ConvexClientProvider } from "@/components/convex-client-provider";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "Eventify - Delightful Events Start Here",
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
             </ConvexClientProvider>
           </ClerkProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
