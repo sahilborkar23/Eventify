@@ -185,7 +185,7 @@ export default function CreateEventPage() {
         ticketPrice: data.ticketPrice || undefined,
         coverImage: data.coverImage || undefined,
         themeColor: data.themeColor,
-        hasPro,
+        // hasPro,
       });
 
       toast.success("Event created successfully! 🎉");
@@ -201,6 +201,13 @@ export default function CreateEventPage() {
     setValue("category", generatedData.category);
     setValue("capacity", generatedData.suggestedCapacity);
     setValue("ticketType", generatedData.suggestedTicketType);
+    setValue("ticketPrice", generatedData.suggestedTicketPrice);
+    // setValue("coverImage", generatedData.suggestedCoverImage);
+    // setValue("themeColor", generatedData.suggestedThemeColor || "#1e3a8a");
+    // setValue("state", generatedData.suggestedState || "");
+    // setValue("city", generatedData.suggestedCity || "");
+    // setValue("locationType", generatedData.suggestedLocationType || "physical");
+    // setValue("venue", generatedData.suggestedVenue || "");
     toast.success("Event details filled! Customize as needed.");
   };
 

@@ -28,7 +28,7 @@ export default function LandingPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-lg font-light">
-              Whether you&apos;re hosting or attending, Spott makes every event
+              Whether you&apos;re hosting or attending, Eventify makes every event
               memorable. Join our community today.
             </p>
 

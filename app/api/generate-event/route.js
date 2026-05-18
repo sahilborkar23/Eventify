@@ -14,7 +14,7 @@ export async function POST(req) {
       );
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const systemPrompt = `You are an event planning assistant. Generate event details based on the user's description.
 
@@ -26,7 +26,14 @@ Return this exact JSON structure:
   "description": "Detailed event description in a single paragraph. Use spaces instead of line breaks. Make it 2-3 sentences describing what attendees will learn and experience.",
   "category": "One of: tech, music, sports, art, food, business, health, education, gaming, networking, outdoor, community",
   "suggestedCapacity": 50,
-  "suggestedTicketType": "free"
+  "suggestedTicketType": "free",
+  "suggestedTicketPrice": 0,
+  "suggestedCoverImage": "",
+  "suggestedThemeColor": "#1e3a8a",
+  "suggestedState": "",
+  "suggestedCity": "",
+  "suggestedLocationType": "physical",
+  "suggestedVenue": ""
 }
 
 User's event idea: ${prompt}
@@ -61,10 +68,14 @@ Rules:
 
     return NextResponse.json(eventData);
   } catch (error) {
-    console.error("Error generating event:", error);
-    return NextResponse.json(
-      { error: "Failed to generate event" + error.message },
-      { status: 500 }
-    );
-  }
+  console.error("Gemini Error:", error);
+
+  return NextResponse.json(
+    {
+      error:
+        "AI service temporarily unavailable.",
+    },
+    { status: 500 }
+  );
+}
 }
